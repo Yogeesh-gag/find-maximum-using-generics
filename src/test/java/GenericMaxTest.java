@@ -1,4 +1,5 @@
 import com.bridgelabz.maximum.GenericMax;
+import com.bridgelabz.maximum.GenericMaxRefactor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,5 +20,12 @@ public class GenericMaxTest {
     public void testGenericString() {
         assertEquals("Peach", GenericMax.testMaximum("Apple", "Peach", "Banana"));
     }
+
+    @Test
+    public void testGenericRefactorClass() {
+        GenericMaxRefactor<String> strMax = new GenericMaxRefactor<>("Apple", "Banana", "Peach");
+        assertEquals("Peach", strMax.testMaximum());
+    }
+
 
 }

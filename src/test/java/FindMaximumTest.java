@@ -60,7 +60,7 @@ public class FindMaximumTest {
 
     //TC 1.3 Max in third position
     @Test
-    public  void findStringMaxAtThirdPositiongit ()
+    public  void findStringMaxAtThirdPosition()
     {
         String s1="not";
         String s2="none";
