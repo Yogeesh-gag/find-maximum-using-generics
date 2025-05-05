@@ -1,5 +1,6 @@
 import com.bridgelabz.maximum.GenericMax;
 import com.bridgelabz.maximum.GenericMaxRefactor;
+import com.bridgelabz.maximum.GenericMaxVarArgs;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,6 +27,11 @@ public class GenericMaxTest {
         GenericMaxRefactor<String> strMax = new GenericMaxRefactor<>("Apple", "Banana", "Peach");
         assertEquals("Peach", strMax.testMaximum());
     }
-
+    @Test
+    public void testGenericVarArgs() {
+        assertEquals(100, GenericMaxVarArgs.testMaximum(10, 30, 100, 70));
+        assertEquals("Zebra", GenericMaxVarArgs.testMaximum("Apple", "Mango", "Zebra"));
+        assertEquals(5.6f, GenericMaxVarArgs.testMaximum(3.5f,5.6f,4.5f,2.4f));
+    }
 
 }
