@@ -14,6 +14,14 @@ public class GenericMaxVarArgs {
         Collections.sort(list); //Sorting in ascending order
         T max=list.get(list.size()-1); //Last element is the max
 
+        //Calling static method
+        printMax(max);
+
         return max;
+    }
+
+    //UC5-Generic print Method
+    public static <T> void printMax(T max){
+        System.out.println("The maximum value is "+max);
     }
 }
